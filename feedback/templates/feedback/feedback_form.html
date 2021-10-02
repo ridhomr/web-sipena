@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+
+<!-- ======= Head Section ======= -->
+
+<main id="main">
+  <br><br><br>
+<section id="values" class="values mb-9">
+  <div class="container-fluid">
+      <div class=" mb-9 p-5 container col-9" data-aos="fade-up">
+      <h5 class="pb-4">
+        <!--text-->
+      </h5>
+     <div class="card mx-3 mt-n5 shadow-lg" style="border-radius:0px; border:none">
+      <div class="card-body p-5">
+        <h4 class="card-title mb-3 text-dark text-uppercase" style="font-weight:700">Feedback</h4>
+
+        <form acrion="" method="POST" class="container">
+          <div class="row">
+            
+                <div class="container-fluid">
+                  {% csrf_token %}
+                  {{form.nama|as_crispy_field}}
+                </div>
+            
+            <div class="container-fluid">
+              {{form.masukkan|as_crispy_field}}
+            </div>
+
+            <div class="container-fluid">
+              {{form.saran|as_crispy_field}}
+
+            </div>
+            
+            <div class="row">
+              <div class="form-check form-switch mb-9">
+                <input class="form-check-input" type="checkbox" checked>
+                <label class="form-check-label text-center" for="flexSwitchCheckChecked">I agree to the Terms and Conditions of this Website.<br></label>
+              </div>
+            </div>
+          <div class="col-lg-6 float-left">
+            <button type="submit" class="btn btn-primary col-lg-12">
+              Submit
+            </button>
+          </div>
+        <div class="col-lg-6 float-right">
+          <a href="{% url 'tampil_feedback' %}" class="btn btn-danger btn-block">
+            Batal
+          </a>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</form>
+</section>
+</main>
+<br><br>
+
+
+{% endblock content %}

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!-- ======= Head Section ======= -->
+  <!-- <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'img/hero-img.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section> -->
+<!-- Head Hero -->
+
+  <main id="main">
+
+    <!-- ======= Values Section ======= -->
+    <section id="values" class="values">
+
+      <div class="container col-9" data-aos="fade-up">
+
+        <header class="section-header">
+          <br><br><br><br>
+          <h2>Buku Tamu</h2>
+          <p>tambahkan pertanyaan atau keperluan anda</p>
+        </header>
+
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="container col-7">
+            <div class="row">
+              
+                {{form.nama|as_crispy_field}}
+              
+
+              <div class="col-lg-6">
+                {{form.alamat|as_crispy_field}}
+              </div>
+
+              <div class="col-lg-6">
+                {{form.telepon|as_crispy_field}}
+              </div>
+              <div class="col-lg-12">
+                {{form.email|as_crispy_field}}
+              </div>
+
+              
+                {{form.tanggal|as_crispy_field}}
+
+                {{form.instansi|as_crispy_field}}
+
+                {{form.keperluan|as_crispy_field}}
+           </div>
+         </div>
+            </tr>
+          </div>
+          <br>
+          <div class="container-fluid">
+            <button type="submit" class="btn btn-primary btn-block col-lg-5 container">
+              <i class="fa fa-share">
+                <span>Kirim</span> &emsp;
+              </i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </section><!-- End Values Section -->
+
+  </main><!-- End #main -->
+
+{% endblock content %}

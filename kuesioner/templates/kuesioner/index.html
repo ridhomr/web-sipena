@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ======= Head Section ======= -->
+  <!-- <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'img/hero-img.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section> -->
+<!-- Head Hero -->
+<br><br><br>
+  <main id="main">
+
+    <!-- ======= Values Section ======= -->
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <br>
+          <h2>Kuesioner</h2>
+          <p>Silahkan mengisi kuesioner disini</p>
+        </header>
+
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div>
+            <label for="satu" style="color: black; font-size: 22px; font-style: oblique;">Fasilitas ruang pelayanan baik dan memadai</label>
+            <div>
+              <p>
+                Sangat Tidak Puas &emsp;
+                  {{ form.Pilihan1 }}
+                Sangat Puas
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <label for="dua" style="color: black; font-size: 22px; font-style: oblique;">Kebersihan, keamanan dan kenyamanan pada ruang pelayanan</label>
+            <div>
+              <p>
+                Sangat Tidak Puas &emsp; 
+                {{ form.Pilihan2 }}
+                Sangat Puas
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <label for="tiga" style="color: black; font-size: 22px; font-style: oblique;">Kesesuaian informasi yang diminta</label>
+            <div>
+              <p>
+                Sangat Tidak Puas &emsp; 
+                {{ form.Pilihan3 }}
+                Sangat Puas
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <label for="empat" style="color: black; font-size: 22px; font-style: oblique;">Penanganan terhadap saran dan pengaduan atas layanan yang diterima</label>
+            <div>
+              <p>
+                Sangat Tidak Puas &emsp; 
+                {{ form.Pilihan4 }}
+                &emsp; Sangat Puas
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <label for="lima" style="color: black; font-size: 22px; font-style: oblique;">Respon petugas dalam memberikan pelayanan</label>
+            <div>
+              <p>
+                Sangat Tidak Puas &emsp;
+                {{ form.Pilihan5 }}
+                Sangat Puas
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <label for="enam" style="color: black; font-size: 22px; font-style: oblique;">Kemudahan dalam mengakses informasi</label>
+            <div>
+              <p>
+                Sangat Tidak Puas &emsp;
+                {{ form.Pilihan6 }}
+                Sangat Puas
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <label for="tujuh" style="color: black; font-size: 22px; font-style: oblique;">Fasilitas keamanan yang diberikan</label>
+            <div>
+              <p>
+                Sangat Tidak Puas &emsp;
+                {{ form.Pilihan7 }}
+                Sangat Puas
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="text-center text-lg-start">
+            <button type="submit" class="btn btn-primary col-lg-12">
+              <span>Kirim</span> &emsp;
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </section><!-- End Values Section -->
+
+  </main><!-- End #main -->
+
+{% endblock content %}

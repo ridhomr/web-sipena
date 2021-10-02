@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>login</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'dashboard/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'dashboard/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+</head>
+<br><br>
+<style>
+    .bg-login{
+        background: #0090ff;
+       
+    }
+</style>
+<body class="bg-login">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <img width="520px" height="450px" src="{% static 'img/log.svg' %}">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center mb-5">
+                                        
+                                    </div>
+
+                                    <form class="user" action="" method="POST">
+                                        {% csrf_token %}
+                                        <table>
+                                            <tr>
+                                                <hr>
+                                                <div class="container-fluid px-3">
+                                                    <label class="mb-5">
+                                                        <h1 class="mb-0 text-center" style="font-size: 23px; margin-bottom: 200%;">Dashboard Admin Panel</h1>
+                                                        <th width="85px">
+                                                            <label for="username" style="font-size: 15px;">Username</label>
+                                                        </th>
+                                                    </label>
+                                                </div>
+                                                <td width="300px">{{ form.username }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label for="password" style="font-size: 15px;">Password</label>
+                                                </th>
+                                                <td>{{ form.password }}</td>
+                                            </tr>
+                                        </table><p>
+                                        <div class="row px-3 mb-4" style="font-size: 13px;">
+                                            <div class="custom-control custom-checkbox custom-control-inline" > <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> <label for="chk1" class="custom-control-label text-sm">Remember me</label> </div> <a href="#" class="ml-auto mb-0 text-sm  "><label class="text-bold" style="font-size:16px; color:#0090ff;">Lupa Password?</label></a>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button type="submit" value="login" name="submit" class="btn bg-login btn-user btn-block text-white">
+                                              <span>Login</span>
+                                            </button>
+                                          </div>
+                                    </form>
+                                    <hr>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'dashboard/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'dashboard/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'dashboard/js/sb-admin-2.min.js' %}"></script>
+
+</body>
+
+</html>

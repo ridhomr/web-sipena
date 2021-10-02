@@ -1,0 +1,32 @@
+cara menjalankan website sipena apps :
+
+1. install python 3.8 +
+
+2. buka terminal / command prompt
+
+3. membuat virtualenv ketikkan perintah : python -m venv env
+
+4. aktifkan virtualenv ketikkan perintah : windows 7/10 : env\scripts\activate
+					   mac os  : source env/bin/activate
+
+5. install package requirements.txt ketikkan perintah : pip install -r requirements.txt 
+
+6. aktifkan local server 'xampp' atau 'lampp'
+
+7. configurasi database mysql di dalam folder : web informasi pendataan/webapp/settings.py
+
+8. migrate database ketikkan perintah : python manage.py migrate
+
+9. RUNNING APPS ketikkan perintah : python manage.py runserver
+
+10. membuat user untuk admin & superadmin, ketikkan perintah : python manage.py createsuperuser
+
+11. cek di browser dengan port 8000 -> localhost:8000
+
+
+HAK AKSES : ADMIN & SUPERADMIN
+path :
+ADMIN : localhost:8000/dashboard
+SUPERADMIN : localhost:8000/admin
+
+ 
